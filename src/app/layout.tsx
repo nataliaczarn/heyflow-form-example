@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-sync-scripts */
+/* eslint-disable @next/next/no-script-component-in-head */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,9 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      // eslint-disable-next-line @next/next/no-script-component-in-head
+      <head>
+        <script src="https://assets.prd.heyflow.com/builder/widget/latest/webview.js" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        66
         {children}
       </body>
     </html>
